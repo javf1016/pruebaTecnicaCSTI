@@ -1,0 +1,10 @@
+FROM openjdk:19-jdk
+
+WORKDIR /app
+
+COPY target/pruebaTecnicaCSTI-0.0.1-SNAPSHOT.jar /app/pruebaTecnicaCSTI-0.0.1-SNAPSHOT.jar
+COPY src/main/resources/application.properties /app/application.properties
+
+EXPOSE 8000
+
+CMD ["java", "-jar", "pruebaTecnicaCSTI-0.0.1-SNAPSHOT.jar"]
